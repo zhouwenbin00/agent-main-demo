@@ -5,12 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>agent-main-demo</artifactId>
+    <artifactId>agent-main-demo2</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>attach-demo</module>
+        <module>agent-demo</module>
         <module>test-demo</module>
+        <module>attach-demo</module>
     </modules>
 
     <properties>

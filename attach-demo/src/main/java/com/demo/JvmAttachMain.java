@@ -11,17 +11,17 @@ import java.net.URL;
 public class JvmAttachMain {
     public static void main(String[] args) {
         // 输入参数，第一个参数为需要 Attach jvm pid 第二参数为 class 路径
-        if(args==null||args.length<2){
-            System.out.println("请输入必要参数，第一个参数为 pid，第二参数为 class 绝对路径");
-            return;
-        }
-        String pid = args[0];
-        String classPath = args[1];
+//        if(args==null||args.length<2){
+//            System.out.println("请输入必要参数，第一个参数为 pid，第二参数为 class 绝对路径");
+//            return;
+//        }
+        String pid = "3324";
+        String classPath = "E:\\demo\\agent-main-demo\\test-demo\\target\\classes\\com\\demo\\TestObject.class";
         System.out.println("当前需要热更新 jvm pid 为 "+pid);
         System.out.println("更换 class 绝对路径为 "+classPath);
         // 获取当前 jar 路径
         URL jarUrl = JvmAttachMain.class.getProtectionDomain().getCodeSource().getLocation();
-        String jarPath=jarUrl.getPath();
+        String jarPath="E:\\demo\\agent-main-demo\\agent-demo\\target\\agent-demo-1.0-SNAPSHOT.jar";
         System.out.println("当前热更新工具 jar 路径为 "+jarPath);
         VirtualMachine vm = null;//7997是待绑定的jvm进程的pid号
         try {
